@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Cameras</title>
+</head>
+
+<body>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto;
+            background-color: #ffffff;
+            padding: 10px;
+        }
+
+        .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            
+        }
+    </style>
+    <div class="grid-container">
+        <div class="grid-item">
+            <div class="col-lg-8  offset-lg-2">
+                <h3 class="mt-5">Web Camera</h3>
+                <img src="{{ url_for('web_feed') }}" width="320px" height="240px">
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class='col-lg-8 offset-lg-2'>
+                <h3 class="mt-5">USB Camera</h3>
+                <img src="{{ url_for('usb_feed') }}" width="320px" height="240px">
+
+            </div>
+
+        </div>
+        <div class='grid-item'>
+            <div class="col-lg-8 offset-lg-2">
+                <h3 class="mt-5">IP Camera</h3>
+                <img src="{{ url_for('esp_feed') }}" width="320px" height="240px">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

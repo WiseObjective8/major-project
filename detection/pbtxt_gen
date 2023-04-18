@@ -1,0 +1,3 @@
+# import cv2 as cv
+
+# cv.dnn.writeTextGraph('./config_files/drones.pb', './config_files/drones_graph.pbtxt')
